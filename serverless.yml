@@ -1,0 +1,22 @@
+service: serverless-test # NOTE: update this with your service name
+plugins:
+ - serverless-apigw-binary
+ - serverless-offline
+
+custom:
+  apigwBinary:
+    types:           #list of mime-types
+      - 'image/jpeg'
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  upload:
+    handler: handler.upload
+    role: aaa
+    events:
+      - http:
+        path: images
+        method: post
+         

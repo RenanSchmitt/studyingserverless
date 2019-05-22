@@ -1,0 +1,19 @@
+{
+  "name": "projeto-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "start": "sls offline start -r us-east-1 --noTimeout"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "^2.458.0",
+    "mocha": "^6.1.4",
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-offline": "^4.10.3"
+  }
+}
